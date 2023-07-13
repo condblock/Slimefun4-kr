@@ -69,9 +69,9 @@ public enum Radioactivity {
     }
 
     public @Nonnull String getLore() {
-        return ChatColor.GREEN + "\u2622" + ChatColor.GRAY + " Radiation level: " + color + toString().replace('_', ' ');
+        return ChatColor.GREEN + "\u2622" + ChatColor.GRAY + " 방사성 위험도: " + color + toString().replace('_', ' ');
     }
-
+    
     /**
      * This method returns the level for the radiation effect to use in conjunction
      * with this level of {@link Radioactive}.
