@@ -423,12 +423,12 @@ public final class SlimefunItems {
     public static final SlimefunItemStack CRAFTING_MOTOR = new SlimefunItemStack("CRAFTING_MOTOR", HeadTexture.CRAFTING_MOTOR, "&6제작용 모터", "", "&7전동 제작대의 주요 부품입니다");
 
     /* Rainbow blocks */
-    public static final SlimefunItemStack RAINBOW_WOOL = new SlimefunItemStack("RAINBOW_WOOL", Material.WHITE_WOOL, "&5무지개색 양털", "", RAINBOW);
-    public static final SlimefunItemStack RAINBOW_GLASS = new SlimefunItemStack("RAINBOW_GLASS", Material.WHITE_STAINED_GLASS, "&5무지개색 색유리", "", RAINBOW);
-    public static final SlimefunItemStack RAINBOW_CLAY = new SlimefunItemStack("RAINBOW_CLAY", Material.WHITE_TERRACOTTA, "&5무지개색 테라코타", "", RAINBOW);
-    public static final SlimefunItemStack RAINBOW_GLASS_PANE = new SlimefunItemStack("RAINBOW_GLASS_PANE", Material.WHITE_STAINED_GLASS_PANE, "&5무지개색 색유리 판", "", RAINBOW);
-    public static final SlimefunItemStack RAINBOW_CONCRETE = new SlimefunItemStack("RAINBOW_CONCRETE", Material.WHITE_CONCRETE, "&5무지개색 콘크리트", "", RAINBOW);
-    public static final SlimefunItemStack RAINBOW_GLAZED_TERRACOTTA = new SlimefunItemStack("RAINBOW_GLAZED_TERRACOTTA", Material.WHITE_GLAZED_TERRACOTTA, "&5무지개색 유광 테라코타", "", RAINBOW);
+    public static final SlimefunItemStack RAINBOW_WOOL = new SlimefunItemStack("RAINBOW_WOOL", Material.WHITE_WOOL, "&5무지개색 양털", "", LoreBuilder.RAINBOW);
+    public static final SlimefunItemStack RAINBOW_GLASS = new SlimefunItemStack("RAINBOW_GLASS", Material.WHITE_STAINED_GLASS, "&5무지개색 색유리", "", LoreBuilder.RAINBOW);
+    public static final SlimefunItemStack RAINBOW_CLAY = new SlimefunItemStack("RAINBOW_CLAY", Material.WHITE_TERRACOTTA, "&5무지개색 테라코타", "", LoreBuilder.RAINBOW);
+    public static final SlimefunItemStack RAINBOW_GLASS_PANE = new SlimefunItemStack("RAINBOW_GLASS_PANE", Material.WHITE_STAINED_GLASS_PANE, "&5무지개색 색유리 판", "", LoreBuilder.RAINBOW);
+    public static final SlimefunItemStack RAINBOW_CONCRETE = new SlimefunItemStack("RAINBOW_CONCRETE", Material.WHITE_CONCRETE, "&5무지개색 콘크리트", "", LoreBuilder.RAINBOW);
+    public static final SlimefunItemStack RAINBOW_GLAZED_TERRACOTTA = new SlimefunItemStack("RAINBOW_GLAZED_TERRACOTTA", Material.WHITE_GLAZED_TERRACOTTA, "&5무지개색 유광 테라코타", "", LoreBuilder.RAINBOW);
     /* Seasonal */
     private static final String CHRISTMAS = ChatUtils.christmas("[크리스마스 에디션]");
     public static final SlimefunItemStack RAINBOW_WOOL_XMAS = new SlimefunItemStack("RAINBOW_WOOL_XMAS", Material.WHITE_WOOL, "&5무지개색 양털 &7(크리스마스)", "", CHRISTMAS);
@@ -527,7 +527,7 @@ public final class SlimefunItems {
     public static final SlimefunItemStack GOLD_24K_BLOCK = new SlimefunItemStack("GOLD_24K_BLOCK", Material.GOLD_BLOCK, "&f금 블록 &7(24캐럿)");
 
     /* Gems */
-    public static final SlimefunItemStack SYNTHETIC_DIAMOND = new SlimefunItemStack("SYNTHETIC_DIAMOND", Material.DIAMOND, "&b합성 다이아몬드", "", "&f제작대에서 일반 다이아몬드 대신 사용할 수 있습니다")
+    public static final SlimefunItemStack SYNTHETIC_DIAMOND = new SlimefunItemStack("SYNTHETIC_DIAMOND", Material.DIAMOND, "&b합성 다이아몬드", "", "&f제작대에서 일반 다이아몬드 대신 사용할 수 있습니다");
     public static final SlimefunItemStack SYNTHETIC_EMERALD = new SlimefunItemStack("SYNTHETIC_EMERALD", Material.EMERALD, "&b합성 에메랄드", "", "&f주민들과 거래할 때 사용할 수 있습니다");
     public static final SlimefunItemStack SYNTHETIC_SAPPHIRE = new SlimefunItemStack("SYNTHETIC_SAPPHIRE", HeadTexture.SAPPHIRE, "&b합성 청금석", "", "&f제작대에서 일반 청금석 대신 사용할 수 있습니다");
     public static final SlimefunItemStack CARBONADO = new SlimefunItemStack("CARBONADO", HeadTexture.CARBONADO, "&b&l카보나도", "", "&7&o\"흑(黑)금강석\"");
@@ -548,7 +548,7 @@ public final class SlimefunItems {
     public static final SlimefunItemStack TALISMAN_HUNTER = new SlimefunItemStack("HUNTER_TALISMAN", Material.EMERALD, "&a사냥꾼의 부적", "", "&f이 부적을 가지고 있으면", "&f20% 확률로 몬스터에서 두 배의 전리품이 나옵니다");
     public static final SlimefunItemStack TALISMAN_LAVA = new SlimefunItemStack("LAVA_TALISMAN", Material.EMERALD, "&a샐러맨더의 부적", "", "&f이 부적을 가지고 있으면 ", "&f용암에 빠졌을 때", "&f화염 저항 효과를 주고 소모됩니다");
     public static final SlimefunItemStack TALISMAN_WATER = new SlimefunItemStack("WATER_TALISMAN", Material.EMERALD, "&a인어의 부적", "", "&f이 부적을 가지고 있으면", "&f물에 가라앉기 시작할 때", "&f수중 호흡 효과를 주고 소모됩니다");
-    public static final SlimefunItemStack TALISMAN_ANGEL = new SlimefunItemStack("ANGEL_TALISMAN", Material.EMERALD, "&a천사의 부적", "", "&f이 부적을 가지고 있으면", "&f75% 확률로 낙하 대미지를 받지 않습니다);
+    public static final SlimefunItemStack TALISMAN_ANGEL = new SlimefunItemStack("ANGEL_TALISMAN", Material.EMERALD, "&a천사의 부적", "", "&f이 부적을 가지고 있으면", "&f75% 확률로 낙하 대미지를 받지 않습니다");
     public static final SlimefunItemStack TALISMAN_FIRE = new SlimefunItemStack("FIRE_TALISMAN", Material.EMERALD, "&a소방관의 부적", "", "&f이 부적을 가지고 있으면", "&f몸이 불타기 시작할 때", "&f화염 저항 효과를 주고 소모됩니다");
     public static final SlimefunItemStack TALISMAN_MAGICIAN = new SlimefunItemStack("MAGICIAN_TALISMAN", Material.EMERALD, "&a마도사의 부적", "", "&f이 부적을 가지고 있으면", "&f마법 부여를 80%의 보정치를 얻고","&f가끔씩 추가 인첸트를 얻습니다");
     public static final SlimefunItemStack TALISMAN_TRAVELLER = new SlimefunItemStack("TRAVELLER_TALISMAN", Material.EMERALD, "&a탐험가의 부적", "", "&f이 부적을 가지고 있으면", "&f60% 확률로 달리기를 시작할 때 속도 증가 효과를 받습니다");
@@ -698,7 +698,7 @@ public final class SlimefunItems {
     public static final SlimefunItemStack PROGRAMMABLE_ANDROID = new SlimefunItemStack("PROGRAMMABLE_ANDROID", HeadTexture.PROGRAMMABLE_ANDROID, "&c안드로이드 &7(일반)", "", "&8\u21E8 &7기능: 없음", "&8\u21E8 &7연료 효율: 1.0x");
     public static final SlimefunItemStack PROGRAMMABLE_ANDROID_FARMER = new SlimefunItemStack("PROGRAMMABLE_ANDROID_FARMER", HeadTexture.PROGRAMMABLE_ANDROID_FARMER, "&c안드로이드 &7(농부)", "", "&8\u21E8 &7기능: 농사", "&8\u21E8 &7연료 효율: 1.0x");
     public static final SlimefunItemStack PROGRAMMABLE_ANDROID_MINER = new SlimefunItemStack("PROGRAMMABLE_ANDROID_MINER", HeadTexture.PROGRAMMABLE_ANDROID_MINER, "&c안드로이드 &7(광부)", "", "&8\u21E8 &7기능: 채광", "&8\u21E8 &7연료 효율: 1.0x");
-    public static final SlimefunItemStack PROGRAMMABLE_ANDROID_WOODCUTTER = new SlimefunItemStack("PROGRAMMABLE_ANDROID_WOODCUTTER", HeadTexture.PROGRAMMABLE_ANDROID_WOODCUTTER, "&c안드로이드 &7(벌목꾼)", "", "&8\u21E8 &7기능: 벌목", "&8\u21E8 &7연료 효율: 1.0x")
+    public static final SlimefunItemStack PROGRAMMABLE_ANDROID_WOODCUTTER = new SlimefunItemStack("PROGRAMMABLE_ANDROID_WOODCUTTER", HeadTexture.PROGRAMMABLE_ANDROID_WOODCUTTER, "&c안드로이드 &7(벌목꾼)", "", "&8\u21E8 &7기능: 벌목", "&8\u21E8 &7연료 효율: 1.0x");
     public static final SlimefunItemStack PROGRAMMABLE_ANDROID_BUTCHER = new SlimefunItemStack("PROGRAMMABLE_ANDROID_BUTCHER", HeadTexture.PROGRAMMABLE_ANDROID_BUTCHER, "&c안드로이드 &7(도살업자)", "", "&8\u21E8 &7기능: 도살", "&8\u21E8 &7공격 피해: 4", "&8\u21E8 &7연료 효율: 1.0x");
     public static final SlimefunItemStack PROGRAMMABLE_ANDROID_FISHERMAN = new SlimefunItemStack("PROGRAMMABLE_ANDROID_FISHERMAN", HeadTexture.PROGRAMMABLE_ANDROID_FISHERMAN, "&c안드로이드 &7(어부)", "", "&8\u21E8 &7기능: 낚시", "&8\u21E8 &7성공 확률: 10%", "&8\u21E8 &7연료 효율: 1.0x");
 
