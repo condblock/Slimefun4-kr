@@ -197,19 +197,19 @@ public final class SlimefunItems {
     }
 
     /* Bows */
-    public static final SlimefunItemStack EXPLOSIVE_BOW = new SlimefunItemStack("EXPLOSIVE_BOW", Material.BOW, "&c폭파의 활", "&f이 활로 쏜 화살은", "&f적을 하늘로 날려버릴 겁니다");
-    public static final SlimefunItemStack ICY_BOW = new SlimefunItemStack("ICY_BOW", Material.BOW, "&b냉기의 활", "&f이 활로 쏜 화살은", "&f2초동안 적을 움직이지 못하게 합니다");
+    public static final SlimefunItemStack EXPLOSIVE_BOW = new SlimefunItemStack("EXPLOSIVE_BOW", Material.BOW, "&c폭파의 활", "&f이 활로 쏜 화살은", "&f맞은 자리에 폭발을 일으킵니다");
+    public static final SlimefunItemStack ICY_BOW = new SlimefunItemStack("ICY_BOW", Material.BOW, "&b냉기의 활", "&f이 활로 쏜 화살은", "&f맞은 대상을 2초동안 움직이지 못하게 합니다");
 
     /* Tools */
     public static final SlimefunItemStack SMELTERS_PICKAXE = new SlimefunItemStack("SMELTERS_PICKAXE", Material.DIAMOND_PICKAXE, "&6제련사의 곡괭이", "&c&l자동으로 광물을 제련합니다", "", "&9행운 마법 부여와 호환됩니다");
     public static final SlimefunItemStack LUMBER_AXE = new SlimefunItemStack("LUMBER_AXE", Material.DIAMOND_AXE, "&6나무꾼의 도끼", "&a&o나무를 통째로 베어 냅니다");
     public static final SlimefunItemStack PICKAXE_OF_CONTAINMENT = new SlimefunItemStack("PICKAXE_OF_CONTAINMENT", Material.IRON_PICKAXE, "&c억제의 곡괭이", "", "&9스포너를 획득할 수 있습니다");
-    public static final SlimefunItemStack EXPLOSIVE_PICKAXE = new SlimefunItemStack("EXPLOSIVE_PICKAXE", Material.DIAMOND_PICKAXE, "&e폭파의 곡괭이", "", "&f한 번에 꽤 많은 블록을 캘 수 있습니다", "", "&9행운 마법 부여와 호환됩니다");
+    public static final SlimefunItemStack EXPLOSIVE_PICKAXE = new SlimefunItemStack("EXPLOSIVE_PICKAXE", Material.DIAMOND_PICKAXE, "&e폭파의 곡괭이", "", "&f한 번에 많은 블록을 캘 수 있습니다", "", "&9행운 마법 부여와 호환됩니다");
     public static final SlimefunItemStack EXPLOSIVE_SHOVEL = new SlimefunItemStack("EXPLOSIVE_SHOVEL", Material.DIAMOND_SHOVEL, "&e폭파의 삽", "", "&f한번에 꽤 많은 블록을 캘 수 있습니다");
     public static final SlimefunItemStack PICKAXE_OF_THE_SEEKER = new SlimefunItemStack("PICKAXE_OF_THE_SEEKER", Material.DIAMOND_PICKAXE, "&a추적자의 곡괭이", "&f내구도를 소모해서 가까운 광석을 찾아냅니다", "", "&7&e오른쪽 클릭&7으로 가장 가까운 광석의 위치 표시");
     public static final SlimefunItemStack COBALT_PICKAXE = new SlimefunItemStack("COBALT_PICKAXE", Material.IRON_PICKAXE, "&9코발트 곡괭이");
     public static final SlimefunItemStack PICKAXE_OF_VEIN_MINING = new SlimefunItemStack("PICKAXE_OF_VEIN_MINING", Material.DIAMOND_PICKAXE, "&e광맥 채굴 곡괭이", "", "&f이 곡괭이는 한 광맥 전체를 캘 수 있습니다");
-    public static final SlimefunItemStack CLIMBING_PICK = new SlimefunItemStack("CLIMBING_PICK", Material.IRON_PICKAXE, "&b등산용 갈고리", "", "&f오른쪽 클릭으로 특정 표면으로 올라갈 수 있습니다.", "&f효율 인첸트를 부여하면 더 빠르게 오릅니다.");
+    public static final SlimefunItemStack CLIMBING_PICK = new SlimefunItemStack("CLIMBING_PICK", Material.IRON_PICKAXE, "&b등산용 갈고리", "", "&f오른쪽 클릭으로 돌로 된 벽을 올라갈 수 있습니다.", "&f효율 인첸트를 부여하면 더 빠르게 오릅니다.");
 
     static {
         COBALT_PICKAXE.addUnsafeEnchantment(Enchantment.DURABILITY, 10);
@@ -380,7 +380,7 @@ public final class SlimefunItems {
     public static final SlimefunItemStack STEEL_PLATE = new SlimefunItemStack("STEEL_PLATE", Material.PAPER, "&7&l강철판");
     public static final SlimefunItemStack BATTERY = new SlimefunItemStack("BATTERY", HeadTexture.BATTERY, "&6배터리");
     public static final SlimefunItemStack CARBON = new SlimefunItemStack("CARBON", HeadTexture.CARBON, "&e탄소");
-    public static final SlimefunItemStack COMPRESSED_CARBON = new SlimefunItemStack("COMPRESSED_CARBON", HeadTexture.COMPRESSED_CARBON, "&cC압축된 탄소");
+    public static final SlimefunItemStack COMPRESSED_CARBON = new SlimefunItemStack("COMPRESSED_CARBON", HeadTexture.COMPRESSED_CARBON, "&c압축된 탄소");
     public static final SlimefunItemStack CARBON_CHUNK = new SlimefunItemStack("CARBON_CHUNK", HeadTexture.COMPRESSED_CARBON, "&4탄소 덩어리");
     public static final SlimefunItemStack STEEL_THRUSTER = new SlimefunItemStack("STEEL_THRUSTER", Material.BUCKET, "&7&l강철 추진기");
     public static final SlimefunItemStack POWER_CRYSTAL = new SlimefunItemStack("POWER_CRYSTAL", HeadTexture.POWER_CRYSTAL, "&c&l에너지 코어");
@@ -848,8 +848,8 @@ public final class SlimefunItems {
     public static final SlimefunItemStack CHARGING_BENCH = new SlimefunItemStack("CHARGING_BENCH", Material.CRAFTING_TABLE, "&6충전 테이블", "", "&f충전 가능한 아이템을 충전합니다", "", LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), LoreBuilder.powerBuffer(128), "&8\u21E8 &e\u26A1 &7Energy Loss: &c50%");
 
     public static final SlimefunItemStack VANILLA_AUTO_CRAFTER = new SlimefunItemStack("VANILLA_AUTO_CRAFTER", HeadTexture.VANILLA_AUTO_CRAFTER, "&2자동 제작기 &8(바닐라)", "", "&f상자같은 블록 위에 설치해서", "&e제작대&f에서 제작 가능한 아이템을", "&f제작할 수 있습니다", "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "&8\u21E8 &e\u26A1 &716 J/아이템");
-    public static final SlimefunItemStack ENHANCED_AUTO_CRAFTER = new SlimefunItemStack("ENHANCED_AUTO_CRAFTER", HeadTexture.ENHANCED_AUTO_CRAFTER, "&2자동 제작기 &8(개조됨)", "", "&f상자같은 블록 위에 설치해서", "&e개조된 제작대&f에서 제작 가능한 아이템을", "f&제작할 수 있습니다", "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "&8\u21E8 &e\u26A1 &716 J/아이템");
-    public static final SlimefunItemStack ARMOR_AUTO_CRAFTER = new SlimefunItemStack("ARMOR_AUTO_CRAFTER", HeadTexture.ARMOR_AUTO_CRAFTER, "&2자동 제작기 &8(갑옷 제작용)", "", "&f상자같은 블록 위에 설치해서", "&e갑옷 제작대&f에서 제작 가능한 아이템을", "f&제작할 수 있습니다", "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "&8\u21E8 &e\u26A1 &732 J/개");
+    public static final SlimefunItemStack ENHANCED_AUTO_CRAFTER = new SlimefunItemStack("ENHANCED_AUTO_CRAFTER", HeadTexture.ENHANCED_AUTO_CRAFTER, "&2자동 제작기 &8(개조됨)", "", "&f상자같은 블록 위에 설치해서", "&e개조된 제작대&f에서 제작 가능한 아이템을", "&f제작할 수 있습니다", "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "&8\u21E8 &e\u26A1 &716 J/아이템");
+    public static final SlimefunItemStack ARMOR_AUTO_CRAFTER = new SlimefunItemStack("ARMOR_AUTO_CRAFTER", HeadTexture.ARMOR_AUTO_CRAFTER, "&2자동 제작기 &8(갑옷 제작용)", "", "&f상자같은 블록 위에 설치해서", "&e갑옷 제작대&f에서 제작 가능한 아이템을", "&f제작할 수 있습니다", "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "&8\u21E8 &e\u26A1 &732 J/개");
 
     public static final SlimefunItemStack IRON_GOLEM_ASSEMBLER = new SlimefunItemStack("IRON_GOLEM_ASSEMBLER", Material.IRON_BLOCK, "&6철 골렘 조립기", "", LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), "&8\u21E8 &7대기 시간: &b30초", LoreBuilder.powerBuffer(4096), "&8\u21E8 &e\u26A1 &72048 J/철 골렘");
     public static final SlimefunItemStack WITHER_ASSEMBLER = new SlimefunItemStack("WITHER_ASSEMBLER", Material.OBSIDIAN, "&5위더 조립기", "", LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), "&8\u21E8 &7대기 시간: &b30 Seconds", LoreBuilder.powerBuffer(4096), "&8\u21E8 &e\u26A1 &74096 J/위더");
