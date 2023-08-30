@@ -50,7 +50,7 @@ public final class SlimefunItems {
     public static final SlimefunItemStack GRAPPLING_HOOK = new SlimefunItemStack("GRAPPLING_HOOK", Material.LEAD, "&6그래플링 훅", "", LoreBuilder.RIGHT_CLICK_TO_USE);
     public static final SlimefunItemStack SOLAR_HELMET = new SlimefunItemStack("SOLAR_HELMET", Material.IRON_HELMET, "&b태양광 헬멧", "", "&a&o들고 있는 아이템과 갑옷을 충전합니다");
     public static final SlimefunItemStack CLOTH = new SlimefunItemStack("CLOTH", Material.PAPER, "&b섬유");
-    public static final SlimefunItemStack REINFORCED_CLOTH = new SlimefunItemStack("REINFORCED_CLOTH", Material.PAPER, "&b강화 섬유", "", "&f이 섬유는 &bLead&f로 강화되어", "&f방사성 물질들으로부터", "&f보호해 줍니다");
+    public static final SlimefunItemStack REINFORCED_CLOTH = new SlimefunItemStack("REINFORCED_CLOTH", Material.PAPER, "&b강화 섬유", "", "&f이 섬유는 &b납&f으로 강화되어", "&f방사성 물질들으로부터", "&f보호해 줍니다");
     public static final SlimefunItemStack TIN_CAN = new SlimefunItemStack("CAN", HeadTexture.TIN_CAN, "&f주석 캔");
     public static final SlimefunItemStack NIGHT_VISION_GOGGLES = new SlimefunItemStack("야간 투시경", Material.LEATHER_HELMET, Color.BLACK, "&a밤에도 밝은 시야를 제공해주는 고글", "", "&9+ 야간 투시");
     public static final SlimefunItemStack ELYTRA_CAP = new SlimefunItemStack("ELYTRA_CAP", Material.LEATHER_HELMET, Color.PURPLE, "&5겉날개 헬멧", "", "&7이 투구는 겉날개를 타고 날다가", "&7머리를 박아 죽지 않게 합니다.");
@@ -527,9 +527,9 @@ public final class SlimefunItems {
     public static final SlimefunItemStack GOLD_24K_BLOCK = new SlimefunItemStack("GOLD_24K_BLOCK", Material.GOLD_BLOCK, "&f금 블록 &7(24캐럿)");
 
     /* Gems */
-    public static final SlimefunItemStack SYNTHETIC_DIAMOND = new SlimefunItemStack("SYNTHETIC_DIAMOND", Material.DIAMOND, "&b합성 다이아몬드", "", "&f제작대에서 일반 다이아몬드 대신 사용할 수 있습니다");
-    public static final SlimefunItemStack SYNTHETIC_EMERALD = new SlimefunItemStack("SYNTHETIC_EMERALD", Material.EMERALD, "&b합성 에메랄드", "", "&f주민들과 거래할 때 사용할 수 있습니다");
-    public static final SlimefunItemStack SYNTHETIC_SAPPHIRE = new SlimefunItemStack("SYNTHETIC_SAPPHIRE", HeadTexture.SAPPHIRE, "&b합성 청금석", "", "&f제작대에서 일반 청금석 대신 사용할 수 있습니다");
+    public static final SlimefunItemStack SYNTHETIC_DIAMOND = new SlimefunItemStack("SYNTHETIC_DIAMOND", Material.DIAMOND, "&b인조 다이아몬드", "", "&f제작대에서 일반 다이아몬드 대신 사용할 수 있습니다");
+    public static final SlimefunItemStack SYNTHETIC_EMERALD = new SlimefunItemStack("SYNTHETIC_EMERALD", Material.EMERALD, "&b인조 에메랄드", "", "&f주민들과 거래할 때 사용할 수 있습니다");
+    public static final SlimefunItemStack SYNTHETIC_SAPPHIRE = new SlimefunItemStack("SYNTHETIC_SAPPHIRE", HeadTexture.SAPPHIRE, "&b인조 사파이어", "", "&f제작대에서 일반 청금석 대신 사용할 수 있습니다");
     public static final SlimefunItemStack CARBONADO = new SlimefunItemStack("CARBONADO", HeadTexture.CARBONADO, "&b&l카보나도", "", "&7&o\"흑(黑)금강석\"");
     public static final SlimefunItemStack RAW_CARBONADO = new SlimefunItemStack("RAW_CARBONADO", HeadTexture.RAW_CARBONADO, "&b카보나도 원석");
 
