@@ -38,8 +38,8 @@ public final class SlimefunItems {
     public static final SlimefunItemStack PORTABLE_DUSTBIN = new SlimefunItemStack("PORTABLE_DUSTBIN", HeadTexture.TRASH_CAN, "&6휴대용 쓰레기통", "&f휴대할 수 있는 쓰레기통입니다", "", LoreBuilder.RIGHT_CLICK_TO_OPEN);
     public static final SlimefunItemStack ENDER_BACKPACK = new SlimefunItemStack("ENDER_BACKPACK", HeadTexture.ENDER_BACKPACK, "&6엔더 가방", "&a&o휴대 가능한 엔더 상자입니다", "", LoreBuilder.RIGHT_CLICK_TO_OPEN);
     public static final SlimefunItemStack MAGIC_EYE_OF_ENDER = new SlimefunItemStack("MAGIC_EYE_OF_ENDER", Material.ENDER_EYE, "&6&l마법의 엔더의 눈", "&4&l엔더 갑옷 세트가 필요합니다", "", "&7&e오른쪽 클릭&7으로 엔더 진주 투척");
-    public static final SlimefunItemStack BROKEN_SPAWNER = new SlimefunItemStack("BROKEN_SPAWNER", Material.SPAWNER, "&c손상된 생성기", "&7생성물: &b<Type>", "", "&c심하게 손상되어서 고대 제단에서 수리해야 사용할 수 있습니다");
-    public static final SlimefunItemStack REPAIRED_SPAWNER = new SlimefunItemStack("REINFORCED_SPAWNER", Material.SPAWNER, "&b수리된 생성기", "&7생성물: &b<Type>");
+    public static final SlimefunItemStack BROKEN_SPAWNER = new SlimefunItemStack("BROKEN_SPAWNER", Material.SPAWNER, "&cBroken Spawner", "&7Type: &b<Type>", "", "&cFractured, must be repaired in an Ancient Altar");
+    public static final SlimefunItemStack REPAIRED_SPAWNER = new SlimefunItemStack("REINFORCED_SPAWNER", Material.SPAWNER, "&bReinforced Spawner", "&7Type: &b<Type>");
     public static final SlimefunItemStack INFERNAL_BONEMEAL = new SlimefunItemStack("INFERNAL_BONEMEAL", Material.BONE_MEAL, "&4업화의 뼛가루", "", "&c네더 와트도 성장시킬 수 있습니다");
     public static final SlimefunItemStack TAPE_MEASURE = new SlimefunItemStack("TAPE_MEASURE", "180d5c43a6cf5bb7769fd0c8240e1e70d2ae38ef9d78a1db401aca6a2cb36f65", "&6줄자", "", "&eShift + 오른쪽 클릭&7으로 지점 설정", "&e오른쪽 클릭&7으로 길이 확인");
 
