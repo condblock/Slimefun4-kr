@@ -651,7 +651,7 @@ public final class SlimefunItems {
     public static final SlimefunItemStack LIGHTNING_RUNE = new SlimefunItemStack("ANCIENT_RUNE_LIGHTNING", new ColoredFireworkStar(Color.fromRGB(255, 255, 95), "&7고대의 룬 &8&l[&e&l번개&8&l]"));
     public static final SlimefunItemStack SOULBOUND_RUNE = new SlimefunItemStack("ANCIENT_RUNE_SOULBOUND", new ColoredFireworkStar(Color.fromRGB(47, 0, 117), "&7고대의 룬 &8&l[&5&l영속&8&l]", "&e떨어진 아이템에 던지면 영속이 부여됩니다"));
     public static final SlimefunItemStack ENCHANTMENT_RUNE = new SlimefunItemStack("ANCIENT_RUNE_ENCHANTMENT", new ColoredFireworkStar(Color.fromRGB(255, 217, 25), "&7고대의 룬 &8&l[&6&l마법 부여&8&l]", "&e떨어진 아이템에 던지면 무작위 마법이 부여됩니다"));
-    public static final SlimefunItemStack VILLAGER_RUNE = new SlimefunItemStack("ANCIENT_RUNE_VILLAGERS", new ColoredFireworkStar(Color.fromRGB(160, 20, 5), "&7고대의 룬 &8&l[&4&l주민&8&l]", "&e주민에게 우클릭하면 잠시 후에 직업과 거래가 초디화됩니다"));
+    public static final SlimefunItemStack VILLAGER_RUNE = new SlimefunItemStack("ANCIENT_RUNE_VILLAGERS", new ColoredFireworkStar(Color.fromRGB(160, 20, 5), "&7고대의 룬 &8&l[&4&l주민&8&l]", "&e주민에게 우클릭하면 잠시 후에 직업과 거래가 초기화됩니다"));
 
     /* Electricity */
     public static final SlimefunItemStack SOLAR_GENERATOR = new SlimefunItemStack("SOLAR_GENERATOR", Material.DAYLIGHT_DETECTOR, "&b태양광 발전기", "", LoreBuilder.machine(MachineTier.BASIC, MachineType.GENERATOR), LoreBuilder.powerBuffer(0), LoreBuilder.powerPerSecond(4));
