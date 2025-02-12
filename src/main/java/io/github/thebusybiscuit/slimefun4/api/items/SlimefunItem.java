@@ -160,6 +160,21 @@ public class SlimefunItem implements Placeable {
         this.recipeOutput = recipeOutput;
     }
 
+    /**
+     * This creates a new {@link SlimefunItem} from the given arguments.
+     *
+     * @param itemGroup
+     *                  The {@link ItemGroup} this {@link SlimefunItem} belongs
+     *                  to
+     * @param item
+     *                  The {@link SlimefunItemStack} that describes the visual
+     *                  features of our {@link SlimefunItem}
+     */
+    @ParametersAreNonnullByDefault
+    public SlimefunItem(ItemGroup itemGroup, SlimefunItemStack item) {
+        this(itemGroup, item, RecipeType.NULL, new ItemStack[] {});
+    }
+
     // Previously deprecated constructor, now only for internal purposes
     @ParametersAreNonnullByDefault
     protected SlimefunItem(ItemGroup itemGroup, ItemStack item, String id, RecipeType recipeType, ItemStack[] recipe) {
@@ -1199,7 +1214,7 @@ public class SlimefunItem implements Placeable {
      *            The {@link ItemStack} to check
      * @return The {@link Optional} {@link SlimefunItem} associated with this {@link ItemStack} if present, otherwise empty
      */
-    public @Nonnull Optional<SlimefunItem> getOptionalByItem(@Nullable ItemStack item) {
+    public static @Nonnull Optional<SlimefunItem> getOptionalByItem(@Nullable ItemStack item) {
         return Optional.ofNullable(getByItem(item));
     }
 }
