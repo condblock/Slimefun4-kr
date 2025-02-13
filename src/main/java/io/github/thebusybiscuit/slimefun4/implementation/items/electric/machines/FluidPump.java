@@ -7,13 +7,14 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 import org.bukkit.block.data.BlockData;
 import org.bukkit.block.data.Levelled;
+import org.bukkit.entity.Player;
+import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
 
 import io.github.bakedlibs.dough.blocks.Vein;
@@ -31,6 +32,8 @@ import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
 import io.github.thebusybiscuit.slimefun4.utils.itemstack.ItemStackWrapper;
 
 import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
+import me.mrCookieSlime.CSCoreLibPlugin.general.Inventory.ChestMenu.AdvancedMenuClickHandler;
+import me.mrCookieSlime.CSCoreLibPlugin.general.Inventory.ClickAction;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.interfaces.InventoryBlock;
 import me.mrCookieSlime.Slimefun.Objects.handlers.BlockTicker;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
@@ -97,7 +100,18 @@ public class FluidPump extends SimpleSlimefunItem<BlockTicker> implements Invent
         }
 
         for (int i : getOutputSlots()) {
-            preset.addMenuClickHandler(i, ChestMenuUtils.getDefaultOutputHandler());
+            preset.addMenuClickHandler(i, new AdvancedMenuClickHandler() {
+
+                @Override
+                public boolean onClick(Player p, int slot, ItemStack cursor, ClickAction action) {
+                    return false;
+                }
+
+                @Override
+                public boolean onClick(InventoryClickEvent e, Player p, int slot, ItemStack cursor, ClickAction action) {
+                    return cursor == null || cursor.getType() == null || cursor.getType() == Material.AIR;
+                }
+            });
         }
     }
 
@@ -204,11 +218,7 @@ public class FluidPump extends SimpleSlimefunItem<BlockTicker> implements Invent
             case BUBBLE_COLUMN:
                 ItemStack waterBottle = new ItemStack(Material.POTION);
                 PotionMeta meta = (PotionMeta) waterBottle.getItemMeta();
-                if (Slimefun.getMinecraftVersion().isBefore(20, 2)) {
-                    meta.setBasePotionData(new PotionData(PotionType.WATER));
-                } else {
-                    meta.setBasePotionType(PotionType.WATER);
-                }
+                meta.setBasePotionData(new PotionData(PotionType.WATER));
                 waterBottle.setItemMeta(meta);
                 return waterBottle;
             default:
@@ -229,10 +239,10 @@ public class FluidPump extends SimpleSlimefunItem<BlockTicker> implements Invent
 
     /**
      * This method checks if the given {@link Block} is a liquid source {@link Block}.
-     *
+     * 
      * @param block
      *            The {@link Block} in question
-     *
+     * 
      * @return Whether that {@link Block} is a liquid and a source {@link Block}.
      */
     private boolean isSource(@Nonnull Block block) {

@@ -6,7 +6,6 @@ slimefun:
   food: 'Mat'
   basic_machines: 'Grundläggande Maskiner'
   electricity: 'Energi och El'
-  androids: 'Programerbara Androider'
   gps: 'GPS-baserade Maskiner'
   armor: 'Rustning'
   magical_items: 'Magiska Föremål'

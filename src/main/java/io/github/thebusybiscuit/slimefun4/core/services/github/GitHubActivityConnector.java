@@ -7,10 +7,10 @@ import java.util.Map;
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-
 import io.github.thebusybiscuit.slimefun4.utils.NumberUtils;
+
+import kong.unirest.JsonNode;
+import kong.unirest.json.JSONObject;
 
 class GitHubActivityConnector extends GitHubConnector {
 
@@ -23,11 +23,11 @@ class GitHubActivityConnector extends GitHubConnector {
     }
 
     @Override
-    public void onSuccess(@Nonnull JsonElement response) {
-        JsonObject object = response.getAsJsonObject();
-        int forks = object.get("forks").getAsInt();
-        int stars = object.get("stargazers_count").getAsInt();
-        LocalDateTime lastPush = NumberUtils.parseGitHubDate(object.get("pushed_at").getAsString());
+    public void onSuccess(@Nonnull JsonNode response) {
+        JSONObject object = response.getObject();
+        int forks = object.getInt("forks");
+        int stars = object.getInt("stargazers_count");
+        LocalDateTime lastPush = NumberUtils.parseGitHubDate(object.getString("pushed_at"));
 
         callback.accept(forks, stars, lastPush);
     }

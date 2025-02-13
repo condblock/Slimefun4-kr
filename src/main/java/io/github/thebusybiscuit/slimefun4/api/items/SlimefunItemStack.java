@@ -15,6 +15,7 @@ import org.apache.commons.lang.Validate;
 import org.bukkit.ChatColor;
 import org.bukkit.Color;
 import org.bukkit.Material;
+import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
@@ -31,7 +32,6 @@ import io.github.thebusybiscuit.slimefun4.api.exceptions.PrematureCodeException;
 import io.github.thebusybiscuit.slimefun4.api.exceptions.WrongItemStackException;
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.utils.HeadTexture;
-import io.github.thebusybiscuit.slimefun4.utils.compatibility.VersionedItemFlag;
 
 /**
  * The {@link SlimefunItemStack} functions as the base for any
@@ -159,7 +159,7 @@ public class SlimefunItemStack extends ItemStack {
                 potionMeta.addCustomEffect(effect, true);
 
                 if (effect.getType().equals(PotionEffectType.SATURATION)) {
-                    im.addItemFlags(VersionedItemFlag.HIDE_ADDITIONAL_TOOLTIP);
+                    im.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
                 }
             }
         });

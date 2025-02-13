@@ -16,7 +16,9 @@ import org.bukkit.inventory.ItemStack;
  * An old remnant of CS-CoreLib.
  * This will be removed once we updated everything.
  * Don't look at the code, it will be gone soon, don't worry.
+ *
  */
+@Deprecated
 public class ChestMenu {
 
     private boolean clickable;
@@ -205,6 +207,7 @@ public class ChestMenu {
      *
      * @return The ChestMenu Instance
      */
+    @Deprecated
     public ChestMenu build() {
         return this;
     }

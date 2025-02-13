@@ -9,11 +9,11 @@ import java.util.logging.Level;
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
+
+import kong.unirest.JsonNode;
+import kong.unirest.json.JSONArray;
+import kong.unirest.json.JSONObject;
 
 class ContributionsConnector extends GitHubConnector {
 
@@ -90,11 +90,11 @@ class ContributionsConnector extends GitHubConnector {
     }
 
     @Override
-    public void onSuccess(@Nonnull JsonElement response) {
+    public void onSuccess(@Nonnull JsonNode response) {
         finished = true;
 
-        if (response.isJsonArray()) {
-            computeContributors(response.getAsJsonArray());
+        if (response.isArray()) {
+            computeContributors(response.getArray());
         } else {
             Slimefun.logger().log(Level.WARNING, "Received an unusual answer from GitHub, possibly a timeout? ({0})", response);
         }
@@ -123,13 +123,13 @@ class ContributionsConnector extends GitHubConnector {
         return parameters;
     }
 
-    private void computeContributors(@Nonnull JsonArray array) {
-        for (JsonElement element : array) {
-            JsonObject object = element.getAsJsonObject();
+    private void computeContributors(@Nonnull JSONArray array) {
+        for (int i = 0; i < array.length(); i++) {
+            JSONObject object = array.getJSONObject(i);
 
-            String name = object.get("login").getAsString();
-            int commits = object.get("contributions").getAsInt();
-            String profile = object.get("html_url").getAsString();
+            String name = object.getString("login");
+            int commits = object.getInt("contributions");
+            String profile = object.getString("html_url");
 
             if (!ignoredAccounts.contains(name)) {
                 String username = aliases.getOrDefault(name, name);

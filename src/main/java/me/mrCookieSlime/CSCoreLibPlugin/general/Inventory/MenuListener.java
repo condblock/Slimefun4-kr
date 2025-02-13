@@ -17,9 +17,12 @@ import me.mrCookieSlime.CSCoreLibPlugin.general.Inventory.ChestMenu.MenuClickHan
 
 /**
  * An old {@link Listener} for CS-CoreLib
- * This is an old remnant of CS-CoreLib, the last bits of the past. They will be removed once everything is
+ * 
+ * @deprecated This is an old remnant of CS-CoreLib, the last bits of the past. They will be removed once everything is
  *             updated.
+ *
  */
+@Deprecated
 public class MenuListener implements Listener {
 
     static final Map<UUID, ChestMenu> menus = new HashMap<>();
